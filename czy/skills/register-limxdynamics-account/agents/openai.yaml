@@ -1,0 +1,4 @@
+interface:
+  display_name: "Limx Dynamics 注册与 CLI Key"
+  short_description: "自动注册 Limx 账号并创建 CLI key，返回完整凭据"
+  default_prompt: "Use $register-limxdynamics-account to register a new Limx Dynamics account and create a CLI key, then return email, password, and key."

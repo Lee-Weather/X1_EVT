@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# 训练/日志产物（大文件、二进制、可再生成）
+logs/
+czy/real_data/
+czy/diff/
+*.log
+*.pt
+*.mp4
+*.mpg
+*.avi
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.csv
+
+# 基线对照存档：当前代码运行状态（必须放在上面的全局忽略规则之后才能放行）
+!czy/baseline/
+!czy/baseline/**
+
+# mocap 数据源头（ref_lib.pt 再生链的小文件正本）
+!resources/motions/raw/
+!resources/motions/raw/**
+# 训练必需的成品动作库（*.pt 全局忽略的白名单）
+!resources/motions/processed/ref_lib.pt
+# mesh 归档源头（176M，运行时用的是 x1/meshes；SSOT 留本地/网盘，不入库）
+resources/robots/x1/Models-meshes/
+
+# 构建产物
+humanoid.egg-info/
+build/
+dist/
+*.egg-info/
+
+# 系统
+.DS_Store
+
+# ===== 凭据 - 绝不提交 =====
+czy/skills/flux-cli/api_key.json

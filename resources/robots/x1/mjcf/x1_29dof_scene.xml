@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="x1_29dof_scene">
+  <include file="x1_29dof_raw.xml"/>
+  <compiler angle="radian"/>
+  <option timestep="0.005" gravity="0 0 -9.81"/>
+  <visual>
+    <global offwidth="1280" offheight="720"/>
+  </visual>
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" width="512" height="512"
+             rgb1="0.85 0.85 0.85" rgb2="0.75 0.75 0.75"/>
+    <material name="gridmat" texrepeat="8 8" reflectance="0.1" texuniform="true"
+              texture="grid"/>
+  </asset>
+  <worldbody>
+    <light name="light0" diffuse="0.9 0.9 0.9" specular="0.3 0.3 0.3"
+           pos="0 -3 4" dir="0 0 -1"/>
+    <light name="light1" mode="targetbodycom" target="base_link"
+           pos="-2 3 4" diffuse="0.7 0.7 0.7"/>
+    <geom name="floor" type="plane" size="0 0 20" pos="0 0 0"
+          material="gridmat" condim="3"/>
+  </worldbody>
+</mujoco>
